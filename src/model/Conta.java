@@ -13,6 +13,7 @@ public class Conta {
     public void depositar(double valor){
         this.saldo = getSaldo() + valor;
     }
+
     public boolean sacar(double valor){
         if (this.getSaldo() >= valor){
             this.saldo = getSaldo() - valor;
@@ -42,7 +43,7 @@ public class Conta {
     }
 
     public void reajustar(double percentual){
-        saldo = saldo + saldo * percentual;
+        saldo += saldo * percentual;
     }
 
 }
